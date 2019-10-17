@@ -20,7 +20,7 @@ Sends a specified signal to a process.
 1. `pid_t pid`  
 The process ID.
 2. `int sig`  
-The signal to send to the PID. (e.g. -TERM or -15 for a `SIGTERM`)
+The signal to send to the PID. (e.g. `-TERM` or `-15` for a `SIGTERM`)
 
 ### mmap
 Maps a file or device into memory.
