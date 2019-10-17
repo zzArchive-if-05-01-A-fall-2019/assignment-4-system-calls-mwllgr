@@ -58,3 +58,25 @@ The process id (PID) to wait for. Values <= 0 reserved for special wait modes.
 Pointer to int where the status information gets stored.
 3. `int options`  
 This parameter changes the waiting behaviour. Default: wait only for terminated children.
+
+## Fail conditions
+### fork
+`ENOMEM`: Can't allocate because low on memory.
+
+### exec
+`EACCES`: e.g. file system mounted with `noexec` parameter.
+
+### unlink
+`EIO`: An IO error occurred.
+
+### read
+`EISDIR`: The file descriptor refers to a directory.
+
+### mount
+`EBUSY`: The source is already mounted.
+
+### chmod
+`ELOOP`: Too many symlinks were encountered while resolving the path name.
+
+### kill
+`EPERM`: The process doesn't have the needed permission to send the signal to any target processes.
