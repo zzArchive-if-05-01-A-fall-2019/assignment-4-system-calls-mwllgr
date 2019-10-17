@@ -80,3 +80,6 @@ This parameter changes the waiting behaviour. Default: wait only for terminated 
 
 ### kill
 `EPERM`: The process doesn't have the needed permission to send the signal to any target processes.
+
+## Trap instructions
+A trap is used to switch from user-mode to the kernel-mode. This is used when a program in user-mode needs to execute a system call (these can only be handled by the OS). After that, the program then returns back to user-mode to execute possible next instructions.
